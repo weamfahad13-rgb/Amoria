@@ -48,17 +48,18 @@
 /* ===== Cake Title ===== */
 
 .cake-title {
-  margin-bottom: 18px;
+  margin-bottom: 26px;
 
   color: #E8D3B3;
 
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 
   text-align: center;
 
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  text-shadow: none;
 }
 
 .cake-img {
