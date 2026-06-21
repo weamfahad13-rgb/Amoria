@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 828.22 337.93">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #e8ddd2;
+      }
+
+      .st1 {
+        fill: #be7474;
+        font-family: ErasITC-Bold, 'Eras Bold ITC';
+        font-size: 198.78px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <rect class="st0" x="0" y="0" width="828.22" height="337.93" rx="51" ry="51"/>
+  <text class="st1" transform="translate(195.18 240.03) scale(.85 1)"><tspan x="0" y="0">send</tspan></text>
+</svg>

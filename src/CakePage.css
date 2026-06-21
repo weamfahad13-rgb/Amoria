@@ -1,0 +1,185 @@
+.cake-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #c87578;
+}
+
+.cake-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.cake-logo {
+  position: absolute;
+  top: 60px;
+  left: 70px;
+  width: 420px;
+  z-index: 5;
+}
+
+.cakes-grid {
+  position: relative;
+  z-index: 6;
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 330px;
+  padding-bottom: 120px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 120px;
+  row-gap: 65px;
+}
+
+.cake-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cake-img {
+  width: 330px;
+  height: 220px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.share-btn,
+.reviews-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.25s;
+}
+
+.share-btn {
+  width: 285px;
+  margin-top: 18px;
+}
+
+.reviews-btn {
+  width: 170px;
+  margin-top: 16px;
+}
+
+.share-btn img,
+.reviews-btn img,
+.send-btn img {
+  width: 100%;
+  display: block;
+}
+
+.share-btn:hover,
+.reviews-btn:hover,
+.send-btn:hover {
+  transform: scale(1.04);
+}
+
+/* ================= Popup ================= */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(246, 236, 216, 0.72);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.popup-box {
+  position: relative;
+  width: 560px;
+}
+
+.popup-bg {
+  width: 100%;
+  display: block;
+}
+
+.review-input {
+  position: absolute;
+
+  top: 150px;
+  left: 70px;
+
+  width: 350px;
+  height: 115px;
+
+  resize: none;
+  outline: none;
+  border: none;
+
+  background: transparent;
+
+  color: #fff7ef;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.review-input::placeholder {
+  color: rgba(255, 248, 240, 0.8);
+}
+
+.send-btn {
+  position: absolute;
+
+  right: 60px;
+  bottom: 45px;
+
+  width: 110px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ================= Reviews Popup ================= */
+
+.reviews-list {
+  position: absolute;
+
+  top: 130px;
+  left: 60px;
+
+  width: 390px;
+  height: 300px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 10px;
+
+  color: #fff8ef;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.8;
+
+  scrollbar-width: none;
+}
+
+.reviews-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.reviews-list p {
+  margin-bottom: 18px;
+  word-wrap: break-word;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
