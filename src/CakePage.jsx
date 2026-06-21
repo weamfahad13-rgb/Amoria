@@ -14,6 +14,9 @@ import cake2 from "./assets/cake2.jpg";
 import cake3 from "./assets/cake3.jpg";
 import cake4 from "./assets/cake4.jpg";
 
+const N8N_WEBHOOK_URL =
+  "https://indicators-gis-msie-companies.trycloudflare.com/webhook/new-review";
+
 function CakePage() {
   const [showWritePopup, setShowWritePopup] = useState(false);
   const [showReviewsPopup, setShowReviewsPopup] = useState(false);
@@ -62,20 +65,34 @@ function CakePage() {
   };
 
   const sendReview = async () => {
-    if (!reviewText.trim()) return;
+    const cleanReview = reviewText.trim();
 
-    const { error } = await supabase.from("reviews").insert([
-      {
-        cake_id: selectedCake + 1,
-        review: reviewText.trim(),
-        sentiment: "pending",
-      },
-    ]);
+    if (!cleanReview || selectedCake === null) return;
+
+    const newReview = {
+      cake_id: selectedCake + 1,
+      review: cleanReview,
+      sentiment: "pending",
+    };
+
+    const { error } = await supabase.from("reviews").insert([newReview]);
 
     if (error) {
       console.error(error);
       alert("Review was not sent.");
       return;
+    }
+
+    try {
+      await fetch(N8N_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newReview),
+      });
+    } catch (n8nError) {
+      console.error("n8n webhook error:", n8nError);
     }
 
     setShowWritePopup(false);
