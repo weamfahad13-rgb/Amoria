@@ -26,6 +26,13 @@ function CakePage() {
 
   const cakes = [cake1, cake2, cake3, cake4];
 
+  const cakeNames = [
+    "Berry Bliss Cake",
+    "Berry Pistachio Cake",
+    "Caramel Pecan Cake",
+    "Honey Pistachio Cake",
+  ];
+
   const fetchReviews = async () => {
     const { data, error } = await supabase
       .from("reviews")
@@ -71,6 +78,7 @@ function CakePage() {
 
     const newReview = {
       cake_id: selectedCake + 1,
+      cake_name: cakeNames[selectedCake],
       review: cleanReview,
       sentiment: "pending",
     };
@@ -108,7 +116,9 @@ function CakePage() {
       <section className="cakes-grid">
         {cakes.map((cake, index) => (
           <div className="cake-card" key={index}>
-            <img className="cake-img" src={cake} alt={`Cake ${index + 1}`} />
+            <h3 className="cake-title">{cakeNames[index]}</h3>
+
+            <img className="cake-img" src={cake} alt={cakeNames[index]} />
 
             <button className="share-btn" onClick={() => openWritePopup(index)}>
               <img src={shareButton} alt="Share your thoughts" />

@@ -45,6 +45,22 @@
   align-items: center;
 }
 
+/* ===== Cake Title ===== */
+
+.cake-title {
+  margin-bottom: 18px;
+
+  color: #fff7ef;
+
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  text-align: center;
+
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
 .cake-img {
   width: 330px;
   height: 220px;
