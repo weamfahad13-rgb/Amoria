@@ -95,7 +95,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     text-align: center;
   }
 
@@ -110,15 +109,15 @@ body {
     display: block;
     width: 290px;
     margin: 18px auto 0;
-    transform: none;
+    transform: translateX(18px);
   }
 
   .main-button:hover {
-    transform: scale(1.04);
+    transform: translateX(18px) scale(1.04);
   }
 
   .main-button:active {
-    transform: scale(0.97);
+    transform: translateX(18px) scale(0.97);
   }
 }
 
@@ -142,14 +141,14 @@ body {
     display: block;
     width: 275px;
     margin: 16px auto 0;
-    transform: none;
+    transform: translateX(18px);
   }
 
   .main-button:hover {
-    transform: scale(1.04);
+    transform: translateX(18px) scale(1.04);
   }
 
   .main-button:active {
-    transform: scale(0.97);
+    transform: translateX(18px) scale(0.97);
   }
 }
