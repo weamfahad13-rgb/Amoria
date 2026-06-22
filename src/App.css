@@ -75,7 +75,9 @@ body {
   transform: translateX(40px) scale(0.97);
 }
 
-/* ===== Mobile ===== */
+/* ========================= */
+/* Mobile Only */
+/* ========================= */
 
 @media (max-width: 768px) {
   .wallpaper {
@@ -87,18 +89,28 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    text-align: center;
   }
 
   .logo {
+    display: block;
     width: 470px;
     max-width: 92%;
+    margin: 0 auto;
   }
 
   .main-button {
+    display: block;
     width: 290px;
-    margin-top: 18px;
-    transform: translateX(0);
+    margin: 18px auto 0;
+    transform: none;
   }
 
   .main-button:hover {
@@ -113,15 +125,31 @@ body {
 @media (max-width: 430px) {
   .hero-content {
     top: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 18px;
   }
 
   .logo {
+    display: block;
     width: 430px;
     max-width: 94%;
+    margin: 0 auto;
   }
 
   .main-button {
+    display: block;
     width: 275px;
-    margin-top: 16px;
+    margin: 16px auto 0;
+    transform: none;
+  }
+
+  .main-button:hover {
+    transform: scale(1.04);
+  }
+
+  .main-button:active {
+    transform: scale(0.97);
   }
 }
