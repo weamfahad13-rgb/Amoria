@@ -193,3 +193,87 @@
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+/* ===== Mobile Cake Page ===== */
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .cake-page {
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .cake-logo {
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+  }
+
+  .cakes-grid {
+    width: 100%;
+    padding-top: 230px;
+    padding-bottom: 90px;
+
+    grid-template-columns: 1fr;
+    row-gap: 70px;
+    column-gap: 0;
+  }
+
+  .cake-title-img {
+    width: 230px;
+    transform: translateX(-8px);
+    margin-bottom: 14px;
+  }
+
+  .cake-img {
+    width: 300px;
+    height: 210px;
+  }
+
+  .share-btn {
+    width: 260px;
+    margin-top: 14px;
+  }
+
+  .reviews-btn {
+    width: 160px;
+    margin-top: 14px;
+  }
+
+  .popup-box {
+    width: 92vw;
+    max-width: 420px;
+  }
+
+  .review-input {
+    top: 27%;
+    left: 12%;
+    width: 63%;
+    height: 28%;
+    font-size: 15px;
+  }
+
+  .send-btn {
+    right: 10%;
+    bottom: 10%;
+    width: 82px;
+  }
+
+  .reviews-list {
+    top: 24%;
+    left: 11%;
+    width: 70%;
+    height: 50%;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .reviews-list p {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+}
