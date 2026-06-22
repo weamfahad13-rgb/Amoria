@@ -45,21 +45,13 @@
   align-items: center;
 }
 
-/* ===== Cake Title ===== */
+/* ===== Cake Title Image ===== */
 
-.cake-title {
-  margin-bottom: 26px;
-
-  color: #E8D3B3;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-
-  text-align: center;
-
-  text-shadow: none;
+.cake-title-img {
+  width: 260px;
+  height: auto;
+  display: block;
+  margin-bottom: 18px;
 }
 
 .cake-img {

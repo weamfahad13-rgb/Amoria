@@ -14,6 +14,11 @@ import cake2 from "./assets/cake2.jpg";
 import cake3 from "./assets/cake3.jpg";
 import cake4 from "./assets/cake4.jpg";
 
+import berryBlissTitle from "./assets/berry-bliss-title.svg";
+import berryPistachioTitle from "./assets/berry-pistachio-title.svg";
+import caramelPecanTitle from "./assets/caramel-pecan-title.svg";
+import honeyPistachioTitle from "./assets/honey-pistachio-title.svg";
+
 const N8N_WEBHOOK_URL =
   "https://indicators-gis-msie-companies.trycloudflare.com/webhook/new-review";
 
@@ -31,6 +36,13 @@ function CakePage() {
     "Berry Pistachio Cake",
     "Caramel Pecan Cake",
     "Honey Pistachio Cake",
+  ];
+
+  const cakeTitleImages = [
+    berryBlissTitle,
+    berryPistachioTitle,
+    caramelPecanTitle,
+    honeyPistachioTitle,
   ];
 
   const fetchReviews = async () => {
@@ -116,7 +128,11 @@ function CakePage() {
       <section className="cakes-grid">
         {cakes.map((cake, index) => (
           <div className="cake-card" key={index}>
-            <h3 className="cake-title">{cakeNames[index]}</h3>
+            <img
+              className="cake-title-img"
+              src={cakeTitleImages[index]}
+              alt={cakeNames[index]}
+            />
 
             <img className="cake-img" src={cake} alt={cakeNames[index]} />
 
