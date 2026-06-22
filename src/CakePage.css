@@ -52,6 +52,7 @@
   height: auto;
   display: block;
   margin-bottom: 18px;
+  transform: translateX(-12px);
 }
 
 .cake-img {
